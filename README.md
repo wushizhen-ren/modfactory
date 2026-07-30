@@ -245,6 +245,23 @@ ModFactory 不仅做模组，也能设计和验证整合包：
 
 ## 安装
 
+### macOS
+
+```bash
+# 检查 Java 21，安装 Minecraft 开发 MCP，并准备 GearFactory
+./scripts/mac-dev.sh setup
+
+# 构建 Fabric 模组
+./scripts/mac-dev.sh build
+
+# 启动 Minecraft 开发客户端
+./scripts/mac-dev.sh run
+```
+
+macOS 开发工程位于 `fabric-mod-dev/`，目标为 Minecraft 1.21.11、Java 21 和 Fabric Loader 0.19.3。Apple Silicon 和 Intel Mac 都通过 Gradle/LWJGL 的平台依赖自动选择本地库。
+
+### Windows
+
 ```bash
 # 一键安装（安装 MCP 服务 + 克隆 GearFactory + 配置 Claude Code）
 install.bat
