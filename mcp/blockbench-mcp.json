@@ -2,7 +2,7 @@
   "mcpServers": {
     "blockbench": {
       "command": "npx",
-      "args": ["tsx", "D:/MC/blockbench-mcp/apps/mcp-server/src/index.ts"],
+      "args": ["tsx", "blockbench-mcp/apps/mcp-server/src/index.ts"],
       "env": {
         "BLOCKBENCH_PORT": "3000"
       }

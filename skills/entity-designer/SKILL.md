@@ -157,7 +157,10 @@ integrity-checker ← VERIFIES COMPLETENESS
 
 ### Blockbench Integration
 
-Blockbench is available at: `C:\Users\Lenovo\AppData\Local\Programs\Blockbench\Blockbench.exe`
+Blockbench is available at:
+- **Windows:** `C:\Users\<user>\AppData\Local\Programs\Blockbench\Blockbench.exe`
+- **macOS:** `/Applications/Blockbench.app` (install via `brew install --cask blockbench`)
+- **Linux:** `blockbench` (install via AppImage or package manager)
 
 **Workflow: Code → Import → Visual Edit → Export**
 
@@ -182,7 +185,7 @@ Blockbench is available at: `C:\Users\Lenovo\AppData\Local\Programs\Blockbench\B
     // ... generated from blueprint specs
   ],
   "textures": {
-    "0": "D:/MC/fabric-mod-dev/src/main/resources/assets/modid/textures/entity/thunder_golem.png"
+    "0": "fabric-mod-dev/src/main/resources/assets/modid/textures/entity/thunder_golem.png"
   }
 }
 ```

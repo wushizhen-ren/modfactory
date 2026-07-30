@@ -96,8 +96,8 @@ if (mcdevMCP_available()) {
 **Status:** ✅ Connected — Blockbench MCP active on localhost:3000
 
 **Setup:**
-1. Blockbench installed: `~/AppData/Local/Programs/Blockbench/`
-2. Plugin: `jasonjgardner/blockbench-mcp-plugin` loaded → `D:/MC/blockbench-mcp-plugin/dist/mcp.js`
+1. Blockbench installed (see platform-specific paths in `skills/entity-designer/SKILL.md`)
+2. Plugin: `jasonjgardner/blockbench-mcp-plugin` loaded → `blockbench-mcp-plugin/dist/mcp.js` (project-relative)
 3. MCP endpoint: `http://localhost:3000/bb-mcp`
 4. Adapter runtime connects an MCP server named `blockbench` to `http://localhost:3000/bb-mcp`
 

@@ -236,26 +236,41 @@ ModFactory 不仅做模组，也能设计和验证整合包：
 
 ## 环境要求
 
-- **AI Agent**：Claude Code / Cursor / 通用 Agent（能读写文件、执行命令）
-- **Java 21+**：Minecraft 1.21.11 运行环境
-- **Node.js 18+**：MCP 服务运行环境
-- **Blockbench**：3D 模型编辑器（可选，实体管线需要）
-- **PowerShell**：纹理引擎运行环境
+| 组件 | Windows | macOS | Linux |
+|------|---------|-------|-------|
+| AI Agent | Claude Code / Cursor / 通用 Agent | 同左 | 同左 |
+| Java 21+ | [Adoptium](https://adoptium.net/) | `brew install openjdk@21` | `apt install openjdk-21-jdk` |
+| Node.js 18+ | [nodejs.org](https://nodejs.org/) | `brew install node` | `apt install nodejs` |
+| Blockbench | [blockbench.net](https://www.blockbench.net/) | `brew install --cask blockbench` | AppImage |
+| PowerShell | 系统自带 | `brew install powershell` | `apt install powershell` |
+
+> PowerShell 是纹理引擎（GearFactory forge.ps1）的运行环境。macOS/Linux 用户需安装 `powershell`（pwsh）。
 
 
 ## 安装
 
 ```bash
-# 一键安装（安装 MCP 服务 + 克隆 GearFactory + 配置 Claude Code）
+# macOS / Linux 一键安装
+chmod +x install.sh && ./install.sh
+
+# Windows 一键安装
 install.bat
 
-# 或手动安装
+# 或手动安装（所有平台通用）
 npm install -g @mcdxai/minecraft-dev-mcp    # MC 源码实时访问
 npm install -g mcmodding-mcp                # Fabric 官方文档检索
 git clone https://github.com/buyicoder/GearFactory.git forge_engine
 ```
 
 安装后在 Claude Code 中直接使用 `/mc-mod-master` 即可触发。
+
+### 启动开发客户端
+
+```bash
+cd fabric-mod-dev
+./gradlew runClient          # macOS / Linux
+gradlew.bat runClient        # Windows
+```
 
 
 ## 核心设计文档

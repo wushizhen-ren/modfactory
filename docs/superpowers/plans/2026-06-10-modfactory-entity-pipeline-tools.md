@@ -612,7 +612,11 @@ Write-Host "PASS"
 Run after a `runClient` session:
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File scripts\qa-runclient-check.ps1 -LogPath C:\Users\Lenovo\.cursor\projects\d-MC\terminals\<terminal-id>.txt
+# PowerShell (cross-platform via pwsh on macOS/Linux)
+pwsh -NoProfile -ExecutionPolicy Bypass -File scripts/qa-runclient-check.ps1 -LogPath terminals/<terminal-id>.txt
+
+# Or on Windows:
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts\qa-runclient-check.ps1 -LogPath terminals\<terminal-id>.txt
 ```
 
 Expected:
